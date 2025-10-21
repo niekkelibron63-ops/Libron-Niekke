@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&family=Poppins:wght@800&family=Kavoon&family=Passion+One:wght@400;700&family=Lily+Script+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(0, 0, 0, 0.75) url("background.jpg") no-repeat center center/cover;
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  color: white;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+#logo {
+  background: rgba(58, 55, 55, 0.7);
+  padding: 15px 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  border: 2px solid white;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.portfolio-header {
+  font-family: 'Kavoon', cursive;
+  font-size: 26px;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-weight: bold;
+  border: 2px solid white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.portfolio-header:hover {
+  color: #cf32f3;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 10px #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  background: #343333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: 4px 4px 6px rgb(231, 228, 228);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Lily Script One', cursive;
+  font-size: 18px;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #cf32f3;
+  background: rgba(237, 230, 230, 0.18);
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  z-index: 1000;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 90%;
+  min-height: 70.9vh; 
+  margin: 10px auto;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 80px 80px 150px; 
+  border-radius: 12px;
+  text-align: center;
+}
+
+.profile-photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+}
+
+.intro h2 {
+  font-family: 'Passion One', sans-serif;
+  font-size: 32px;
+}
+
+.intro p {
+  font-family: 'Passion One', sans-serif;
+  font-size: 22px;
+}
+
+
+.full-grid {
+  grid-column: 1 / -1;
+  background: rgba(58, 55, 55, 0.8);
+  padding: 80px 60px;
+  border-radius: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+
+.full-grid h2 {
+  font-family: 'Passion One', sans-serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.full-grid p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .portfolio {
+    padding: 60px;
+  }
+
+  .portfolio-header {
+    font-size: 24px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .full-grid {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .portfolio {
+    flex-direction: column;
+    padding: 60px 40px 100px;
+  }
+
+  .profile-photo img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .full-grid {
+    width: 100vw;
+    padding: 50px 20px;
+    margin-left: calc(-50vw + 50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .profile-photo img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+
+  .intro p {
+    font-size: 18px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .full-grid h2 {
+    font-size: 26px;
+  }
+
+  .full-grid p {
+    font-size: 16px;
+  }
+}
