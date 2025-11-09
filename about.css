@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&family=Poppins:wght@800&family=Kavoon&family=Passion+One:wght@400;700&family=Lily+Script+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(0, 0, 0, 0.336) url("09999.jpg") no-repeat center center/cover;
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+/* ✅ Move navigation to the right on desktop */
+@media (min-width: 769px) {
+  nav {
+    justify-content: flex-end !important;
+  }
+
+  /* ✅ ensures menu goes to right even if hamburger exists */
+  nav ul {
+    margin-left: auto !important;
+  }
+}
+
+/* Navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  background: #34333300;
+  gap: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  box-shadow: 10px 10px 10px rgb(11, 11, 11);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Lily Script One', cursive;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+nav ul li a:hover {
+  background: rgba(255,255,255,0.1);
+  color: #cf32f3;
+}
+
+.menu-toggle { 
+  display: none; 
+  font-size: 28px; 
+  cursor: pointer; 
+  margin-left: auto;
+}
+
+/* ABOUT ME title box */
+.about-title {
+  font-family: 'Passion One', sans-serif;
+  font-size: 34px;
+  text-align: left;
+  color: white;
+  margin: 20px 0 15px 30px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 15px;
+  width: fit-content;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* About section */
+.about-section {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Info boxes */
+.info-box {
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.info-box h2,
+.info-box h3 {
+  font-family: 'Passion One', sans-serif;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.info-box p,
+.info-box ul,
+.info-box li {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  margin-top: 5px;
+}
+
+/* Remove bullets from lists */
+.info-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Responsive navigation only */
+@media(max-width:768px){
+  nav ul { 
+    display: none; 
+    flex-direction: column; 
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #34333382;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 0 0 15px 15px;
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    box-shadow: 10px 10px 10px rgb(234, 229, 229);
+  }
+
+  nav ul.active { 
+    display: flex; 
+  }
+
+  nav ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .menu-toggle { 
+    display: block; 
+  }
+
+  .about-title {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+}

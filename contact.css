@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&family=Poppins:wght@800&family=Kavoon&family=Passion+One:wght@400;700&family=Lily+Script+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(0, 0, 0, 0.514) url("kkkkkkk.jpg") no-repeat center center/cover;
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  color: white;
+  padding: 10px;
+}
+
+/* Navigation bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* ✅ Move navigation menu to the right on desktop */
+@media (min-width: 769px) {
+  nav {
+    justify-content: flex-end;
+  }
+  nav ul {
+    margin-left: auto;
+  }
+}
+
+/* Menu items */
+nav ul {
+  list-style: none;
+  display: flex;
+  background: #34333300;
+  gap: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(11, 11, 11);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Lily Script One', cursive;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+nav ul li a:hover {
+  background: rgba(255,255,255,0.1);
+  color: #cf32f3;
+}
+
+/* Hamburger */
+.menu-toggle { 
+  display: none; 
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Contact Title */
+.about-title {
+  font-family: 'Passion One', sans-serif;
+  font-size: 34px;
+  color: white;
+  margin: 30px 0 40px 30px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, 0);
+  width: fit-content;
+}
+
+/* Contact Links */
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: rgba(255,255,255,0.1);
+  color: #cf32f3;
+  border-color: #cf32f3;
+}
+
+/* ✅ FIXED HAMBURGER — DOES NOT MOVE ANYWHERE */
+@media(max-width:768px){
+
+  /* make hamburger visible and fixed */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 9999;   /* stays on top */
+  }
+
+  /* overlay menu that doesn't push anything */
+  nav ul { 
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    top: 60px;   /* below the fixed hamburger */
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 15px 0;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    z-index: 9998;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .social-links a {
+    width: 80%;
+  }
+}

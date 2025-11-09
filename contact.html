@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header id="logo">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="menu-toggle">&#9776;</div>
+  </nav>
+</header>
+
+<div class="about-title">CONTACT US</div>
+
+<div class="social-links">
+  <a href="mailto:your-email@example.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+  <a href="https://github.com/niekkelibron63-ops" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  <a href="https://www.instagram.com/itsjustt_niekke?igsh=bHFqbzc5OHlwcXlv&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  <a href="https://www.facebook.com/me/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+  <a href="tel:09363244742"><i class="fas fa-phone"></i> Phone Number</a>
+</div>
+
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav ul");
+
+  toggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+</body>
+</html>
