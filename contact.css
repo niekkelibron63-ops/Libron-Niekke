@@ -23,7 +23,6 @@ nav {
   position: relative;
 }
 
-/* ✅ Move navigation menu to the right on desktop */
 @media (min-width: 769px) {
   nav {
     justify-content: flex-end;
@@ -33,7 +32,7 @@ nav {
   }
 }
 
-/* Menu items */
+
 nav ul {
   list-style: none;
   display: flex;
@@ -58,14 +57,13 @@ nav ul li a:hover {
   color: #cf32f3;
 }
 
-/* Hamburger */
+
 .menu-toggle { 
   display: none; 
   font-size: 28px;
   cursor: pointer;
 }
 
-/* Contact Title */
 .about-title {
   font-family: 'Passion One', sans-serif;
   font-size: 34px;
@@ -78,7 +76,6 @@ nav ul li a:hover {
   width: fit-content;
 }
 
-/* Contact Links */
 .social-links {
   margin-top: 30px;
   display: flex;
@@ -109,25 +106,22 @@ nav ul li a:hover {
   border-color: #cf32f3;
 }
 
-/* ✅ FIXED HAMBURGER — DOES NOT MOVE ANYWHERE */
 @media(max-width:768px){
-
-  /* make hamburger visible and fixed */
   .menu-toggle {
     display: block;
     position: fixed;
     top: 15px;
     right: 20px;
-    z-index: 9999;   /* stays on top */
+    z-index: 9999;   
   }
 
-  /* overlay menu that doesn't push anything */
+  
   nav ul { 
     display: none;
     flex-direction: column;
     width: 100%;
     position: fixed;
-    top: 60px;   /* below the fixed hamburger */
+    top: 60px;  
     right: 0;
     background: rgba(0,0,0,0.7);
     padding: 15px 0;
