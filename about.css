@@ -17,14 +17,13 @@ body {
   border-radius: 15px;
 }
 
-/* ✅ Move navigation to the right on desktop */
+
 @media (min-width: 769px) {
   nav {
     justify-content: flex-end !important;
   }
 
-  /* ✅ ensures menu goes to right even if hamburger exists */
-  nav ul {
+
     margin-left: auto !important;
   }
 }
@@ -68,7 +67,7 @@ nav ul li a:hover {
   margin-left: auto;
 }
 
-/* ABOUT ME title box */
+
 .about-title {
   font-family: 'Passion One', sans-serif;
   font-size: 34px;
@@ -82,7 +81,7 @@ nav ul li a:hover {
   background: rgba(0, 0, 0, 0);
 }
 
-/* About section */
+
 .about-section {
   margin-top: 10px;
   display: flex;
@@ -90,7 +89,7 @@ nav ul li a:hover {
   gap: 20px;
 }
 
-/* Info boxes */
+
 .info-box {
   background: rgba(0, 0, 0, 0);
   border: 2px solid white;
@@ -113,13 +112,13 @@ nav ul li a:hover {
   margin-top: 5px;
 }
 
-/* Remove bullets from lists */
+
 .info-box ul {
   list-style: none;
   padding-left: 0;
 }
 
-/* Responsive navigation only */
+
 @media(max-width:768px){
   nav ul { 
     display: none; 
