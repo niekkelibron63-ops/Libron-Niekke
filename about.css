@@ -22,13 +22,11 @@ body {
   nav {
     justify-content: flex-end !important;
   }
-
-
+  nav ul {
     margin-left: auto !important;
   }
 }
 
-/* Navigation bar */
 nav {
   display: flex;
   align-items: center;
